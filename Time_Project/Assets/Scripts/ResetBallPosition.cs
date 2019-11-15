@@ -27,7 +27,7 @@ public class ResetBallPosition : MonoBehaviour
 
         otherRb.velocity = Vector3.zero;//reset it's velocity to 0,0,0
 
-        deltaTimer =
+        
     }
     
 }
