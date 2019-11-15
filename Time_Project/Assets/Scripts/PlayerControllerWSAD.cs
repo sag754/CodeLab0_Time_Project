@@ -9,6 +9,8 @@ public class PlayerControllerWSAD : MonoBehaviour
     public GameObject camera;
     public float force = 100.0f; //create a force to push the playerObject
     bool isSmall = false;
+    public bool gameOver = false; //create the bool
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +22,9 @@ public class PlayerControllerWSAD : MonoBehaviour
     void Update()
     {
         bool hasInput = false; //create a local variable to track whether the user has inputed something
+      
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && !gameOver)
         { //if the W is pressed
             Vector3 cameraforward = camera.transform.forward;
             cameraforward.y = 0;
@@ -30,7 +33,7 @@ public class PlayerControllerWSAD : MonoBehaviour
             hasInput = true; //the user has pressed a key
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && !gameOver)
         { //if the S is pressed
             Vector3 cameraforward = camera.transform.forward;
             cameraforward.y = 0;
@@ -39,7 +42,7 @@ public class PlayerControllerWSAD : MonoBehaviour
             hasInput = true; //the user has pressed a key
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && !gameOver)
         { //if the A is pressed
             Vector3 cameraright = camera.transform.right;
             cameraright.y = 0;
@@ -48,7 +51,7 @@ public class PlayerControllerWSAD : MonoBehaviour
             hasInput = true; //the user has pressed a key
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && !gameOver)
         {//if the D is pressed
             Vector3 cameraright = camera.transform.right;
             cameraright.y = 0;

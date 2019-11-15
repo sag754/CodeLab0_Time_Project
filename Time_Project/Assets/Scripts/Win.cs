@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class Win : MonoBehaviour
 {
-    public GameObject WinHint;
+    public Text WinHint;
+    public DeltaTimerScript DeltaTimerScript; // call DeltaTimerScript
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,8 @@ public class Win : MonoBehaviour
 
         otherRb.velocity = Vector3.zero;//reset it's velocity to 0,0,0
 
-        Instantiate(WinHint);
+        WinHint.gameObject.SetActive(true); // activate the winning text
+
+        DeltaTimerScript.ResetTimer(); //Reset the timer to 60s
     }
 }
