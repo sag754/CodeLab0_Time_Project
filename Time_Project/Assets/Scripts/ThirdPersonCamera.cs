@@ -9,11 +9,11 @@ public class ThirdPersonCamera : MonoBehaviour  // create Third Person Camera Cl
 
     private Camera cam;                        //references the camera
 
-    private float distance = 10.0f;            //sets the distance away from the lookAt object
+    private float distance = 15.0f;            //sets the distance away from the lookAt object
     private float currentX = 0.0f;             //sets the current X position of the camera
     private float currentY = 50.0f;             //sets the current Y position of the camera
-    private float sensitivityX = 8f;         //sets how quickly the camera rotates on the X-axis
-    private float sensitivityY = 5f;         //sets how quickly the camera rotates on the Y-axis
+    private float sensitivityX = 5f;         //sets how quickly the camera rotates on the X-axis
+    private float sensitivityY = 3f;         //sets how quickly the camera rotates on the Y-axis
 
     private void Start()
     {
