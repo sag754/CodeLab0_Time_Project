@@ -5,7 +5,7 @@ using UnityEngine;
 public class ThirdPersonCamera : MonoBehaviour  // create Third Person Camera Class
 {
     public Transform lookAt;                   //allows to set what the camera will look like
-    public Transform camTransform;
+    public Transform camTransform;             //view the Camera's transform values publicly
 
     private Camera cam;                        //references the camera
 
@@ -17,7 +17,7 @@ public class ThirdPersonCamera : MonoBehaviour  // create Third Person Camera Cl
 
     private void Start()
     {
-        camTransform = transform;              // 
+        camTransform = transform;              // Gets the transform values from transfarm and applies to Camera
         cam = Camera.main;                     // Gets the camera on the scene
     }
 

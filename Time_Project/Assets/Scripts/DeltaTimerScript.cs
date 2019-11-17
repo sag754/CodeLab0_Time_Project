@@ -9,7 +9,8 @@ public class DeltaTimerScript : MonoBehaviour
 {
     public Text deltaTimerText; //variable for the Text component from another script
     public float deltaTimer = 60; //the timer starts at 30s
-    public Text gameover;
+    public Text gameover;  //game over text
+
     public PlayerControllerWSAD playerControllerWSAD;
 
     // Start is called before the first frame update
@@ -26,9 +27,9 @@ public class DeltaTimerScript : MonoBehaviour
 
         //if the deltaTimer is  less than 0
         if(deltaTimer < 0){
-            print("GAME OVER");
-            gameover.gameObject.SetActive(true);
-            playerControllerWSAD.gameOver = true;
+            print("GAME OVER");   //print Game Over in the console
+            gameover.gameObject.SetActive(true);  //if condition is met, set game over to true
+            playerControllerWSAD.gameOver = true; //if condition is met, disable player input
             //print to console
         }
 

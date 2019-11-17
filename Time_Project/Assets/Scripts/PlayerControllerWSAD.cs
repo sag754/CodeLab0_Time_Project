@@ -24,39 +24,39 @@ public class PlayerControllerWSAD : MonoBehaviour
         bool hasInput = false; //create a local variable to track whether the user has inputed something
       
 
-        if (Input.GetKey(KeyCode.W) && !gameOver)
+        if (Input.GetKey(KeyCode.W) && !gameOver)             //allows input from the player for the W key
         { //if the W is pressed
-            Vector3 cameraforward = camera.transform.forward;
-            cameraforward.y = 0;
-            cameraforward = Vector3.Normalize(cameraforward);
-            rb.AddForce(cameraforward * force);
+            Vector3 cameraforward = camera.transform.forward; //gets the camera forward position
+            cameraforward.y = 0;                              //locks the camera's Y-axis to 0 so it doesn't elevate when moving the camera
+            cameraforward = Vector3.Normalize(cameraforward); //forces the camera's forward position to stay flat to avoid flying or sinking
+            rb.AddForce(cameraforward * force);               //add force to the camera's forward position to move FORWARD
             hasInput = true; //the user has pressed a key
         }
 
-        if (Input.GetKey(KeyCode.S) && !gameOver)
+        if (Input.GetKey(KeyCode.S) && !gameOver)             //allows input from the player for the S key
         { //if the S is pressed
-            Vector3 cameraforward = camera.transform.forward;
-            cameraforward.y = 0;
-            cameraforward = Vector3.Normalize(cameraforward);
-            rb.AddForce(cameraforward * -force);
+            Vector3 cameraforward = camera.transform.forward; //gets the camera forward position
+            cameraforward.y = 0;                              //locks the camera's Y-axis to 0 so it doesn't elevate when moving the camera
+            cameraforward = Vector3.Normalize(cameraforward); //forces the camera's forward position to stay flat to avoid flying or sinking
+            rb.AddForce(cameraforward * -force);              //add -force to the camera's forward position to move BACKWARDS
             hasInput = true; //the user has pressed a key
         }
 
-        if (Input.GetKey(KeyCode.A) && !gameOver)
+        if (Input.GetKey(KeyCode.A) && !gameOver)            //allows input from the player for the A key
         { //if the A is pressed
-            Vector3 cameraright = camera.transform.right;
-            cameraright.y = 0;
-            cameraright = Vector3.Normalize(cameraright);
-            rb.AddForce(cameraright * -force);
+            Vector3 cameraright = camera.transform.right;    //gets the camera's right position
+            cameraright.y = 0;                               //locks the camera's Y-axis to 0 so it doesn't elevate when moving the camera
+            cameraright = Vector3.Normalize(cameraright);    //forces the camera's right position to stay flat to avoid flying or sinking
+            rb.AddForce(cameraright * -force);               //add -force to the camera's right position to move LEFT
             hasInput = true; //the user has pressed a key
         }
 
-        if (Input.GetKey(KeyCode.D) && !gameOver)
+        if (Input.GetKey(KeyCode.D) && !gameOver)           //allows input from the player for the D key
         {//if the D is pressed
-            Vector3 cameraright = camera.transform.right;
-            cameraright.y = 0;
-            cameraright = Vector3.Normalize(cameraright);
-            rb.AddForce(cameraright * force);
+            Vector3 cameraright = camera.transform.right;   //gets the camera's right position
+            cameraright.y = 0;                              //locks the camera's Y-axis to 0 so it doesn't elevate when moving the camera
+            cameraright = Vector3.Normalize(cameraright);   //forces the camera's right position to stay flat to avoid flying or sinking
+            rb.AddForce(cameraright * force);               //add force to the camera's right position to move RIGHT
             hasInput = true; //the user has pressed a key
         }
 
